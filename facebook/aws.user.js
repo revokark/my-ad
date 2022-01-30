@@ -3,7 +3,7 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://m.facebook.com/
 // @grant       none
-// @version     1.0
+// @version     1.1
 // @author      -
 // @description 1/30/2022, 9:45:28 PM
 // ==/UserScript==
