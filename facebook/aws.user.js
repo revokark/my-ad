@@ -1,3 +1,12 @@
+// ==UserScript==
+// @name        Learn AWS on Facebook
+// @namespace   Violentmonkey Scripts
+// @match       https://m.facebook.com/
+// @grant       none
+// @version     1.0
+// @author      -
+// ==/UserScript==
+
 const aws_cards = [
     {
         "q": "Differences and commonalities between pre-signed URLs and signed URLs?",
