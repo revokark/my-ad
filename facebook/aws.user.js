@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        Learn AWS on Facebook
+// @name        Learn AWS on Facebook mobile
 // @namespace   Violentmonkey Scripts
 // @match       https://m.facebook.com/
 // @grant       none
@@ -7,6 +7,9 @@
 // @author      -
 // @description 1/30/2022, 9:45:28 PM
 // ==/UserScript==
+
+// AWS content by 
+// https://raw.githubusercontent.com/baobabKoodaa/cloudbite/master/content/aws.js
 
 const aws_cards = [
     {
@@ -1309,32 +1312,25 @@ function getChildLikePost(question, answer) {
 	let mainDiv = document.createElement("div");
 	mainDiv.className = "my-ad";
 	mainDiv.style.backgroundColor = "lightgreen";
-
-	// Content Security Policy error
-	// You can use images from Facebook/Whatsapp/Instagram/giphy.com only 
-	//let img = document.createElement("img");
-	//img.src = childImage;
-	//img.style.width = '100%';
 	
 	let spanContentQ = document.createElement("p");
 	spanContentQ.textContent = question;
 	spanContentQ.style.fontSize = '24px';
 	spanContentQ.style.lineHeight = '25px';
-    spanContentQ.style.textAlign = 'center';
+    	spanContentQ.style.textAlign = 'center';
 	spanContentQ.style.backgroundColor = 'cadetblue';
 	spanContentQ.style.fontWeight = 'bold';
 	spanContentQ.style.paddingBottom = '10px';
 
-    let spanContentA = document.createElement("p");
+    	let spanContentA = document.createElement("p");
 	spanContentA.innerHTML = answer;
 	spanContentA.style.fontSize = '20px';
 	spanContentA.style.lineHeight = '25px';
-    spanContentA.style.textAlign = 'center';
+    	spanContentA.style.textAlign = 'center';
 	spanContentA.style.backgroundColor = 'aliceblue';
 	
 	mainDiv.appendChild(spanContentQ);
-    mainDiv.appendChild(spanContentA);
-	//mainDiv.appendChild(img);
+    	mainDiv.appendChild(spanContentA);
 
 	return mainDiv;
 }
@@ -1342,12 +1338,10 @@ function getChildLikePost(question, answer) {
 function addNewDiv(e) {
 
 	if (e.classList[e.classList.length-1] != 'my-ad') {
-		
 		e.classList.add('my-ad');
 		
-        let randomNum = Math.floor(Math.random() * aws_cards.length);
+        	let randomNum = Math.floor(Math.random() * aws_cards.length);
 		let itemContent = aws_cards[randomNum];
-
 		var mainDiv = getChildLikePost(itemContent.q, itemContent.a);
 		
 		e.appendChild(mainDiv);
@@ -1360,7 +1354,8 @@ function main() {
 	articles.forEach(article => {
 		
 		if (article.classList[article.classList.length - 1] == 'my-ad')
-		{}
+		{
+		}
 		else if (article.children[0].textContent.contains("likes") === true || article.children[0].textContent.contains("Suggested for you")) {
 			hideChilds(article);
 			addNewDiv(article);
