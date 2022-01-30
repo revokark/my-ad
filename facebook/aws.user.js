@@ -5,6 +5,7 @@
 // @grant       none
 // @version     1.0
 // @author      -
+// @description 1/30/2022, 9:45:28 PM
 // ==/UserScript==
 
 const aws_cards = [
