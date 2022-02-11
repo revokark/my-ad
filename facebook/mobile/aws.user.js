@@ -3,7 +3,7 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://m.facebook.com/
 // @grant       none
-// @version     1.0
+// @version     1.1
 // @author      -
 // @description 01/02/2022
 // ==/UserScript==
@@ -12,6 +12,10 @@
 // https://raw.githubusercontent.com/baobabKoodaa/cloudbite/master/content/aws.js
 
 const aws_cards = [
+    {
+        "q": "When to Use a Decorator in Python?",
+        "a": "You'll use a decorator when you need to change the behavior of a function without modifying the function itself. A few good examples are when you want to add logging, test performance, perform caching, verify permissions, and so on"
+    },
     {
         "q": "Differences and commonalities between pre-signed URLs and signed URLs?",
         "a": "Pre-signed URLs vs signed URLs<br><br><ul><li>Pre-signed URLs is a feature of S3.</li><li>Signed URLs is a feature of CloudFront.</li><li>Main use case for both is to share content privately with users, by providing a URL that includes a secret.</li><li>Both can be restricted with factors such as expiration date.</li><li>In addition, pre-signed URLs can be used to allow users to upload objects to buckets where they normally wouldn't have permissions to upload.</li></ul>"
