@@ -3,7 +3,7 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://m.facebook.com/
 // @grant       none
-// @version     1.1
+// @version     1.2
 // @author      -
 // @description 01/02/2022
 // ==/UserScript==
@@ -12,6 +12,11 @@
 // https://raw.githubusercontent.com/baobabKoodaa/cloudbite/master/content/aws.js
 
 const aws_cards = [
+    {
+        "q": "S3 file structure",
+        "a": "To AWS S3, '/' isn't a delimiter, it's a character that's part of the filename.
+So for instance "/foo/bar.txt" and "/foo//bar.txt" are different files in S3, even though they'd be the same file in a filesystem."
+    },
     {
         "q": "When to Use a Decorator in Python?",
         "a": "You'll use a decorator when you need to change the behavior of a function without modifying the function itself. A few good examples are when you want to add logging, test performance, perform caching, verify permissions, and so on"
